@@ -29,9 +29,13 @@ jobs:
           python3 loconotion/loconotion --chromedriver chromedriver "pages_repo/site.toml"
       - name: Push to GitHub pages
         run: |
+          echo '---'
           ls -lah
-          ls -lah dist
-          ls -lah dist/site
+          echo '---'
+          ls -lah ../
+          echo '---'
+          ls -lah ../../
+          echo '---'
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           GIT_DEPLOY_DIR=dist/site \
